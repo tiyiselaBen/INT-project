@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .border {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 10px;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<div class="border border-secondary rounded p-3">
+    <form th:action="@{/login_form/new}" method="get" style="background-color: cyan;">
+
+        <h1>Login</h1>
+        <table>
+            <tr class="form-group row">
+                <td class="col-sm-4 col-form-label">Email:</td>
+                <td class="col-sm-8"><input type="email" name="email" class="form-control" required/></td>
+            </tr>
+            <tr class="form-group row">
+                <td class="col-sm-4 col-form-label">Password:</td>
+                <td class="col-sm-8"><input type="password" name="password" class="form-control" required/></td>
+            </tr>
+            <tr>
+                <td><button type="reset" class="btn btn-primary m-2">RESET</button></td>
+                <td><button type="submit" class="btn btn-primary m-2" onclick="loginBtn()">LOGIN</button></td>
+            </tr>
+        </table>
+
+        <div class="container-fluid text-center">
+            <a class="h5" th:href="@{/admin_menu/new}" style="color: white;">Previous page.</a>
+        </div>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+    function loginBtn(){
+        window.location = "/admin_menu";
+    }
+</script>
+
+
+
+</body>
+</html>

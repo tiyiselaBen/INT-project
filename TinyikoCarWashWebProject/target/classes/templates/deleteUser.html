@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete User Page</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 10px;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+        a.h5 {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        a.h5:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<form th:action="@{/deleteUser/new}" method="post" style="max-width: 500px; margin: 0 auto;background-color: cyan;">
+
+    <h1>DELETE USER</h1>
+    <table>
+
+        <tr>
+            <td style="color: white;">Enter an email:</td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><button type="submit" class="btn btn-primary m-2" onclick="deleteBtn()">DELETE USER</button></td>
+        </tr>
+
+    </table>
+    <a class="h5" th:href="@{/admin_menu/back}" style="color: white;">Previous page.</a>
+</form>
+
+<script type="text/javascript">
+    function deleteBtn(){
+        window.location = "/admin_menu";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <style>
+        body {
+            background-color: green; /* Set the background color to green */
+            color: white; /* Set the text color to white for better readability */
+            font-family: Arial, sans-serif; /* Set the font family */
+        }
+        .container-fluid {
+            margin-top: 50px; /* Add some top margin for better spacing */
+        }
+        h1 {
+            margin-bottom: 30px; /* Add some bottom margin to the heading */
+        }
+        table {
+            width: 100%; /* Make the table take up the full width of its container */
+            border-collapse: collapse; /* Collapse borders for better appearance */
+            margin-bottom: 30px; /* Add some bottom margin for better spacing */
+        }
+        th, td {
+            border: 1px solid white; /* Set border for table cells */
+            padding: 8px; /* Add padding to table cells */
+            text-align: left; /* Align text to the left */
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <h1>Employee Details</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate over employees and display details -->
+        <tr th:each="employee : ${employee}">
+            <td th:text="${employee.employeeId}"></td>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.surname}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.phone}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

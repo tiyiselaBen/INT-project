@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <style>
+        body {
+            background-color: green; /* Set the background color to green */
+            color: white; /* Set the text color to white for better readability */
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <h1>Menu</h1>
+</div>
+<div class="container-fluid text-center">
+    <a class="h5" th:href="@{/menu/new}">Click here to login as Admin.</a><br>
+</div>
+</body>
+</html>

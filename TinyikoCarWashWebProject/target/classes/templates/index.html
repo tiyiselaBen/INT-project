@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Set background color to a light gray */
+            font-family: Arial, sans-serif; /* Set font family for better readability */
+        }
+        .container-fluid {
+            margin-top: 20%; /* Adjust the top margin to vertically center the content */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid text-center">
+    <h1>Welcome</h1>
+    <a class="h4" th:href="@{/menu}">Click this link to start.</a>
+</div>
+
+</body>
+</html>
